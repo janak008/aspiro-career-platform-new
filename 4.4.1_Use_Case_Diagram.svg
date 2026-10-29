@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title description">
+  <title id="title">4.4.1 Use Case Diagram - Aspiro Career Guidance Platform</title>
+  <desc id="description">Black and white UML use case diagram showing student and recruiter interactions with the Aspiro platform.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #000; }
+      .association { fill: none; stroke: #000; stroke-width: 2.4; }
+      .boundary { fill: #fff; stroke: #000; stroke-width: 3; }
+      .usecase { fill: #fff; stroke: #000; stroke-width: 2.5; }
+      .actor { fill: none; stroke: #000; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1100" fill="#fff"/>
+  <text x="800" y="58" text-anchor="middle" font-size="34" font-weight="700">4.4.1 USE CASE DIAGRAM</text>
+
+  <rect class="boundary" x="300" y="145" width="1000" height="845" rx="2"/>
+  <text x="800" y="186" text-anchor="middle" font-size="25" font-weight="700">Aspiro Career Guidance Platform</text>
+  <line x1="300" y1="205" x2="1300" y2="205" stroke="#000" stroke-width="2"/>
+
+  <!-- Actor-to-authentication associations route above the system boundary. -->
+  <path class="association" d="M178 520 L178 125 L650 125 L650 250"/>
+  <path class="association" d="M1422 520 L1422 125 L950 125 L950 250"/>
+
+  <!-- Student associations -->
+  <path class="association" d="M178 560 L405 330"/>
+  <path class="association" d="M178 570 L405 445"/>
+  <path class="association" d="M178 580 L405 560"/>
+  <path class="association" d="M178 590 L405 675"/>
+  <path class="association" d="M178 600 L405 790"/>
+  <path class="association" d="M178 610 L405 905"/>
+
+  <!-- Recruiter associations -->
+  <path class="association" d="M1422 560 L1195 415"/>
+  <path class="association" d="M1422 585 L1195 600"/>
+  <path class="association" d="M1422 610 L1195 785"/>
+
+  <ellipse class="usecase" cx="800" cy="250" rx="150" ry="48"/>
+  <text x="800" y="258" text-anchor="middle" font-size="23">Register / Sign in</text>
+
+  <ellipse class="usecase" cx="560" cy="330" rx="155" ry="43"/>
+  <text x="560" y="338" text-anchor="middle" font-size="21">Browse and search jobs</text>
+
+  <ellipse class="usecase" cx="560" cy="445" rx="155" ry="43"/>
+  <text x="560" y="440" text-anchor="middle" font-size="20">
+    <tspan x="560">Apply for jobs</tspan>
+    <tspan x="560" dy="24">(optional cover letter)</tspan>
+  </text>
+
+  <ellipse class="usecase" cx="560" cy="560" rx="155" ry="43"/>
+  <text x="560" y="568" text-anchor="middle" font-size="21">Track / withdraw applications</text>
+
+  <ellipse class="usecase" cx="560" cy="675" rx="155" ry="43"/>
+  <text x="560" y="683" text-anchor="middle" font-size="21">Get career recommendations</text>
+
+  <ellipse class="usecase" cx="560" cy="790" rx="155" ry="43"/>
+  <text x="560" y="798" text-anchor="middle" font-size="21">Analyze resume</text>
+
+  <ellipse class="usecase" cx="560" cy="905" rx="155" ry="43"/>
+  <text x="560" y="913" text-anchor="middle" font-size="21">Ask career chatbot</text>
+
+  <ellipse class="usecase" cx="1040" cy="415" rx="155" ry="43"/>
+  <text x="1040" y="423" text-anchor="middle" font-size="21">Manage job postings</text>
+
+  <ellipse class="usecase" cx="1040" cy="600" rx="155" ry="48"/>
+  <text x="1040" y="593" text-anchor="middle" font-size="20">
+    <tspan x="1040">Review applications</tspan>
+    <tspan x="1040" dy="24">and applicant resumes</tspan>
+  </text>
+
+  <ellipse class="usecase" cx="1040" cy="785" rx="155" ry="43"/>
+  <text x="1040" y="778" text-anchor="middle" font-size="20">
+    <tspan x="1040">Update application</tspan>
+    <tspan x="1040" dy="24">status</tspan>
+  </text>
+
+  <!-- Student actor -->
+  <g class="actor" aria-label="Student actor">
+    <circle cx="150" cy="535" r="27"/>
+    <path d="M150 562 L150 645 M105 590 L150 575 L195 590 M150 645 L112 700 M150 645 L188 700"/>
+  </g>
+  <text x="150" y="739" text-anchor="middle" font-size="24" font-weight="700">Student</text>
+
+  <!-- Recruiter actor -->
+  <g class="actor" aria-label="Recruiter actor">
+    <circle cx="1450" cy="535" r="27"/>
+    <path d="M1450 562 L1450 645 M1405 590 L1450 575 L1495 590 M1450 645 L1412 700 M1450 645 L1488 700"/>
+  </g>
+  <text x="1450" y="739" text-anchor="middle" font-size="24" font-weight="700">Recruiter</text>
+</svg>
