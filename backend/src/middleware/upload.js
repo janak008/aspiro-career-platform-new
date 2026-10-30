@@ -3,9 +3,10 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 
-// Create a temporary upload directory
+// Use Vercel's temporary writable directory
 const uploadsDir = path.join(os.tmpdir(), 'aspiro-uploads');
 
+// Create directory if it does not exist
 if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir, { recursive: true });
 }
@@ -22,18 +23,15 @@ const storage = multer.diskStorage({
 
         cb(
             null,
-            file.fieldname +
-            '-' +
-            uniqueSuffix +
+            file.fieldname + '-' + uniqueSuffix +
             path.extname(file.originalname)
         );
     }
 });
 
-// File filter
+// Allow PDF, DOC and DOCX files
 const fileFilter = (req, file, cb) => {
     const allowedTypes = ['.pdf', '.doc', '.docx'];
-
     const fileExt = path.extname(file.originalname).toLowerCase();
 
     if (allowedTypes.includes(fileExt)) {
@@ -46,11 +44,9 @@ const fileFilter = (req, file, cb) => {
 // Create Multer instance
 const uploadResume = multer({
     storage: storage,
-
     limits: {
         fileSize: 5 * 1024 * 1024
     },
-
     fileFilter: fileFilter
 });
 
